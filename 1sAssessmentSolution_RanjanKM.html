@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Login Module</title>
+
+  <style type="text/css">
+    
+  </style>
+
+  <script language="javascript">
+    
+    function registration()
+	{
+
+
+		var name= document.getElementById("t1").value;
+		var pwd= document.getElementById("t2").value;
+		
+        //character expression code
+		var letters = /^[A-Za-z]+$/;
+		
+		if(name=='')
+		{
+			alert("Please enter your name");
+		}
+		else if(!letters.test(name))
+		{
+			alert("Please enter only alphabet characters in Name textbox");
+		}
+		else if(name.length<4 || name.length>20)
+		{
+			alert("Enter between 5 to 20 characters long in Name textbox");
+		}
+		else if(pwd=='')
+		{
+			alert("Please enter Password");
+		}
+		else if(!letters.test(pwd))
+		{
+			alert("Please enter only alphabet characters in password");
+		}
+		else if(pwd.length<4 || pwd.length>20)
+		{
+			alert("Enter between 4 to 20 characters long in password");
+		}
+		else
+		{				                            
+               		alert('Thank You for Login & You are Redirecting to Google Website');
+			   // Redirecting to other page or webste code. 
+			   window.location = "http://www.google.com"; 
+		}
+	}
+    
+    </script>
+  </head>
+
+<body bgcolor="LightGreen">
+	<!-- Main div code -->
+<div id="D1">
+
+	Enter Name :</td>
+	<input type="text" placeholder="Enter Name here" id="t1" /><p>
+	<div id="d1">
+	</div>
+
+	Enter Password :</td>
+	<input type="password" placeholder="Enter Password here" id="t2" /><p>
+	<div id="d2">
+	</div>
+</div>
+	
+	<input type="button" id="b1" value="Login" onclick="registration()" />
+	
+	<!-- Main div ending here... -->
+	</body>
+	</html>
